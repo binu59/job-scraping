@@ -123,7 +123,7 @@ dashboard.py               Interactive 4-page Streamlit dashboard
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/sri-lanka-job-market-analysis.git
+git clone https://github.com/binu59/job-scraping.git
 cd sri-lanka-job-market-analysis
 ```
 
