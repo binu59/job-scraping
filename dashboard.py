@@ -8,6 +8,7 @@ import plotly.graph_objects as go
 from collections import Counter
 from itertools import chain, combinations
 import re
+from pathlib import Path
 
 # Page config 
 st.set_page_config(
@@ -106,7 +107,8 @@ def extract_skills(text):
 #  Data loading 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/ikman_jobs_clean.csv")
+    data_path = Path(__file__).resolve().parent / "data" / "ikman_jobs_clean.csv"
+    df = pd.read_csv(data_path)
 
     # Re-extract skills from descriptions
     df["skills"] = df["description"].apply(extract_skills)
